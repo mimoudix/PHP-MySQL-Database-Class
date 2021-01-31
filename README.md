@@ -38,9 +38,10 @@ include_once "config.php";
   page_id |title | url | description
  ---|--- | --- | ---   
 #### INSERT
-The following PHP line inserts a new record in the `pages` table:
+The following PHP inserts a new record in `pages` table:
 ```php
 insert($table, $data = [], $clean = true)
+$clean is true by default, turn it false if you want to avoid cleaning strings
 ````
 ```php
 Database::insert('pages', ['title' => 'title here', 'url' => 'url here', 'description' => 'description here'], false);
@@ -52,7 +53,7 @@ The selection from the `pages` table will now look like this:
 #### UPDATE
 
 
- The following PHP will update the title value in the `pages` table where `page_id` is `1`:
+ The following PHP will update `title` value in `pages` table where `page_id` is `1`:
 ```php
 update($what, $fields = [], $conditions = [])
 ````
@@ -66,7 +67,7 @@ The selection from the `pages` table will now look like this:
 
 #### EXISTS
 
-The following PHP will check if the `page_id` exists in the `pages` table
+The following PHP will check if `page_id` exists in `pages` table
 ```php
 exists($what = [], $from, $conditions = [])
 ````
@@ -79,18 +80,18 @@ echo "page not found";
 ```
 #### SIMPLE GET
 
-The following PHP will get the `title` where `page_id` is `1`
+The following PHP will get `title` where `page_id` is `1`
 ```php
 simple_get($raw_what, $from, $conditions = [])
 ```
 ```php
 $title = Database::simple_get('title', 'pages', ['page_id' => 1]);
 echo $title;
-//will print new title here	
+//will print "new title here"
 ```
 #### GET
 
-The following PHP is the same but will be capable of getting a lot o values at the same time
+The following PHP is the same but will be capable of getting multiple values
 ```php
 get($what = [], $from, $conditions = [], $order = false, $clean = false)
 ```
@@ -99,6 +100,12 @@ $data = Database::get(['title', 'description'], 'pages', ['page_id' => 4]);
 
 echo $data->title . "\n" . $data->description;
 //will print new title here description here
+```
+you can also try `*` to get all values
+
+```php
+$data = Database::get(['*'], 'pages', ['page_id' => 1]);
+echo $data->page_id . $data->title . $data->url . $data->description;
 ```
 
 
