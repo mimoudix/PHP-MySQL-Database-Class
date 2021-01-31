@@ -31,6 +31,10 @@ PHP MySQL Database Class allows you to write less and do more.
    include_once "db-class.php";
 include_once "config.php";
    ```
+
+#### INSERT
+
+
  Let's pretend we have a table called  `pages`
 
   page_id |title | url | description
@@ -47,6 +51,7 @@ The selection from the `pages` table will now look like this:
  page_id |title | url | description
  --- | --- | --- |---  
   1|title here| url here| description here
+#### UPDATE
 
 
  The following PHP will update the title value in the `pages` table where `page_id` is `1`:
@@ -61,6 +66,7 @@ The selection from the `pages` table will now look like this:
  --- | --- | --- |---  
   1|new title here| url here| description here
 
+#### EXISTS
 
 The following PHP will check if the `page_id` exists in the `pages` table
 ```php
@@ -73,6 +79,7 @@ echo "page found";
 echo "page not found";
 }
 ```
+#### SIMPLE GET
 
 The following PHP will get the `title` where `page_id` is `1`
 ```php
@@ -83,6 +90,8 @@ $title = Database::simple_get('title', 'pages', ['page_id' => 1]);
 echo $title;
 //will print new title here	
 ```
+#### GET
+
 The following PHP is the same but will be capable of getting a lot o values at the same time
 ```php
 get($what = [], $from, $conditions = [], $order = false, $clean = false)
@@ -94,9 +103,6 @@ echo $data->title . "\n" . $data->description;
 //will print new title here description here
 ```
 
-## Usage
-
-Documentaion is loading 
 
 
 
