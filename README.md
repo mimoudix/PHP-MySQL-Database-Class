@@ -41,7 +41,7 @@ include_once "config.php";
 The following PHP inserts a new record in `pages` table:
 ```php
 insert($table, $data = [], $clean = true)
-$clean is true by default, turn it false if you want to avoid cleaning strings
+//$clean is true by default, turn it false if you want to avoid cleaning strings
 ````
 ```php
 Database::insert('pages', ['title' => 'title here', 'url' => 'url here', 'description' => 'description here'], false);
