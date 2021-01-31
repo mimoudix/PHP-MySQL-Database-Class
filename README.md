@@ -41,5 +41,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 MimoudiX - [@MimoudiX](https://twitter.com/mimoudix) - mimoudix@icloud.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
