@@ -37,7 +37,7 @@ include_once "config.php";
 
   page_id |title | url | description
  ---|--- | --- | ---   
-#### INSERT
+##### INSERT
 The following PHP inserts a new record in `pages` table:
 ```php
 insert($table, $data = [], $clean = true)
@@ -50,7 +50,7 @@ The selection from the `pages` table will now look like this:
  page_id |title | url | description
  --- | --- | --- |---  
   1|title here| url here| description here
-#### UPDATE
+##### UPDATE
 
 
  The following PHP will update `title` value in `pages` table where `page_id` is `1`:
@@ -65,7 +65,7 @@ The selection from the `pages` table will now look like this:
  --- | --- | --- |---  
   1|new title here| url here| description here
 
-#### EXISTS
+##### EXISTS
 
 The following PHP will check if `page_id` exists in `pages` table
 ```php
@@ -78,7 +78,7 @@ echo "page found";
 echo "page not found";
 }
 ```
-#### SIMPLE GET
+##### SIMPLE GET
 
 The following PHP will get `title` where `page_id` is `1`
 ```php
@@ -89,7 +89,7 @@ $title = Database::simple_get('title', 'pages', ['page_id' => 1]);
 echo $title;
 //will print "new title here"
 ```
-#### GET
+##### GET
 
 The following PHP is the same but will be capable of getting multiple values
 ```php
@@ -110,10 +110,6 @@ echo $data->page_id . $data->title . $data->url . $data->description;
 
 
 
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
