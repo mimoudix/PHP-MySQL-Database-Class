@@ -32,14 +32,12 @@ PHP MySQL Database Class allows you to write less and do more.
 include_once "config.php";
    ```
 
-#### INSERT
-
 
  Let's pretend we have a table called  `pages`
 
   page_id |title | url | description
  ---|--- | --- | ---   
-
+#### INSERT
 The following PHP line inserts a new record in the `pages` table:
 ```php
 insert($table, $data = [], $clean = true)
