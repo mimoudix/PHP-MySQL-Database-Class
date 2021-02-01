@@ -16,7 +16,7 @@ PHP MySQL Database Class allows you to write less and do more.
    git clone https://github.com/MimoudiX/PHP-MySQL-Database-Class.git
    ```
 
-3. Enter your database informations in `config.php`
+3. Enter your database informations in `config/config.php`
    ```php
    $database_connection->server = 'localhost';
    $database_connection->username = 'root';
@@ -26,10 +26,10 @@ PHP MySQL Database Class allows you to write less and do more.
 
 
 ### Usage
-  Include `db-class.php` and `config.php` in your php file
+  Include `bootstrap.php` in your php file
    ```sh
-   include_once "db-class.php";
-include_once "config.php";
+   include_once "bootstrap.php";
+
    ```
 
 
