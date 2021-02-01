@@ -67,7 +67,7 @@ The selection from the `pages` table will now look like this:
 
 ##### EXISTS
 
-The following PHP will check if `page_id` exists in `pages` table
+The following PHP will check if `page_id` exists in `pages` table where `title == some title`
 ```php
 exists($what = [], $from, $conditions = [])
 ````
@@ -80,7 +80,7 @@ echo "page not found";
 ```
 ##### SIMPLE GET
 
-The following PHP will get `title` where `page_id` is `1`
+The following PHP will get `title` value where `page_id` is `1`
 ```php
 simple_get($raw_what, $from, $conditions = [])
 ```
