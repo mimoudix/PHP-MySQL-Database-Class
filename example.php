@@ -1,7 +1,6 @@
 <?php
 
-include_once "db-class.php";
-include_once "config.php";
+require_once 'bootstrap.php';
 
 // CREAT PAGES TABLE
 // UNCOMMENT FOR USE
@@ -19,22 +18,24 @@ PRIMARY KEY (`page_id`)
 
  */
 
-$page_title = "page title here";
-$url = "url here";
-$description = "description also here";
-
-//Database::insert('pages', ['title' => $page_title, 'url' => $url, 'description' => $description], false);
-
-//Database::update('pages', ['title' => 'hh'], ['page_id' => '3']);
-
-/* if (Database::exists('page_id', 'pages', ['title' => $page_title])) {
+/* if(Database::exists('page_id', 'pages', ['title' => 'some title'])) {
 echo "page found";
 } else {
 echo "page not found";
-} */
+}
+ */
 
-// Database::simple_get('title', 'pages', ['page_id' => 4]);
+/* $title = Database::simple_get('title', 'pages', ['page_id' => 1]);
+echo $title;
+//will print "new title here"
+ */
 
-//$data = Database::get(['title', 'description'], 'pages', ['page_id' => 4]);
+/* $data = Database::get(['title', 'description'], 'pages', ['page_id' => 4]);
 
-//echo $data->title . $data->description;
+echo $data->title . "\n" . $data->description;
+//will print new title here description here
+ */
+
+/* $data = Database::get(['*'], 'pages', ['page_id' => 1]);
+echo $data->page_id . $data->title . $data->url . $data->description;
+ */
