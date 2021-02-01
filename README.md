@@ -28,7 +28,7 @@ PHP MySQL Database Class allows you to write less and do more.
 ### Usage
   Include `bootstrap.php` in your php file
    ```sh
-   include_once "bootstrap.php";
+   include_once 'bootstrap.php';
 
    ```
 
