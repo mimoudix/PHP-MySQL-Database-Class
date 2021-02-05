@@ -106,4 +106,21 @@ class Database
         return self::$database->query("INSERT INTO `{$table}` ({$parameters_string}) VALUES ({$values_string})");
 
     }
+
+    public static function delete($from, $conditions = [])
+    {
+
+        $from = '`' . $from . '`';
+        $where = [];
+
+        foreach ($conditions as $key => $value) {
+            $where[] = '`' . $key . '` = \'' . $value . '\'';
+        }
+
+        $where = implode(' AND ', $where);
+
+        return self::$database->query("DELETE FROM {$from} WHERE {$where}");
+
+    }
+
 }

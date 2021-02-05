@@ -39,3 +39,5 @@ echo $data->title . "\n" . $data->description;
 /* $data = Database::get(['*'], 'pages', ['page_id' => 1]);
 echo $data->page_id . $data->title . $data->url . $data->description;
  */
+
+//Database::delete('pages', ['page_id' => '4']);
