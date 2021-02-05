@@ -50,6 +50,19 @@ The selection from the `pages` table will now look like this:
  page_id |title | url | description
  --- | --- | --- |---  
   1|title here| url here| description here
+  
+  ##### DELETE
+The following PHP deletes a record in `pages` table where `page_id` is `1`:
+```php
+delete($from, $conditions = [])
+````
+```php
+Database::delete('pages', ['page_id' => '1']);
+//you can write more conditions
+Database::delete('pages', ['page_id' => '1',"title" => "title here"]);
+//all conditions must be true or the record won't be identified
+````
+
 ##### UPDATE
 
 
